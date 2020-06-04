@@ -1,0 +1,40 @@
+﻿<Page x:Class="Shop.selectGood"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Shop"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="550" Background="#95DBC1"
+      Title="selectGood">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Width="450">
+            <StackPanel Margin="0 20 0 20">
+                <Label FontSize="35" FontWeight="SemiBold" Content="Оформление продукта" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF47695D"/>
+
+                <StackPanel Margin="0 10 0 0" HorizontalAlignment="Left">
+                    <TextBlock Foreground="#FF375148" Width="350" TextWrapping="Wrap" FontWeight="Bold" FontSize="22" Text="Название продукта:"/>
+                    <TextBlock x:Name="nameBlock" Foreground="#FF375148" Width="350" TextWrapping="Wrap" FontSize="18" Text="Ангримакс"/>
+                    <TextBlock Foreground="#FF375148" Width="350" TextWrapping="Wrap" FontWeight="Bold" FontSize="22" Text="Название аптеки:"/>
+                    <TextBlock x:Name="namePharm" Foreground="#FF375148" Width="350" TextWrapping="Wrap" FontSize="18" Text="Алми"/>
+                    <TextBlock Foreground="#FF375148" Width="350" TextWrapping="Wrap" FontWeight="Bold" FontSize="22" Text="Кол-во:"/>
+                    <TextBlock x:Name="amountBlock" Foreground="#FF375148" Width="350" TextWrapping="Wrap" FontSize="18" Text="26"/>
+                    <TextBlock Foreground="#FF375148" Width="350" TextWrapping="Wrap" FontWeight="Bold" FontSize="22" Text="Адрес:"/>
+                    <TextBlock x:Name="addressBlock" Foreground="#FF375148" Width="350" TextWrapping="Wrap" FontSize="18" Text="ул.Матуевича, 90"/>
+                </StackPanel>
+                <StackPanel Margin="0 10 0 0" Orientation="Horizontal">
+                    <TextBlock Foreground="#FF375148" Text="Проверка на брак" FontWeight="Bold" FontSize="20"/>
+                    <CheckBox x:Name="toggleStatus" Cursor="Hand" Margin="15 0 0 0" IsChecked="False" Style="{StaticResource CheckBoxStyle1}" />
+                </StackPanel>
+                <Grid Margin="0 20 0 0">
+                    <Button x:Name="btnBack" Content="Назад" HorizontalAlignment="Left" Margin="1,0,0,0" VerticalAlignment="Top" Style="{StaticResource btnEmpty}" Click="btnBack_Click"/>
+                    
+                    <Button x:Name="btnGet" Content="Оформить продукт" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Style="{StaticResource btnFill}" Click="btnGet_Click"/>
+                </Grid>
+                
+            </StackPanel>
+
+        </Grid>
+    </ScrollViewer>
+</Page>
